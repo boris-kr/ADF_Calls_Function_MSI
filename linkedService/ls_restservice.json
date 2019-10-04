@@ -1,0 +1,27 @@
+{
+	"name": "ls_restservice",
+	"properties": {
+		"type": "RestService",
+		"annotations": [],
+		"typeProperties": {
+			"url": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_azurekeyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "AzureFunctionURL"
+			},
+			"enableServerCertificateValidation": false,
+			"authenticationType": "ManagedServiceIdentity",
+			"aadResourceId": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_azurekeyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "ManagedServiceIdentity"
+			}
+		}
+	}
+}
