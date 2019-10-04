@@ -1,0 +1,20 @@
+{
+	"name": "DS_REST",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_restservice",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FunctionKey": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "@concat('?code=',dataset().FunctionKey)"
+		},
+		"schema": []
+	}
+}
